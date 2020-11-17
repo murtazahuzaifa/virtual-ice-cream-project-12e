@@ -1,13 +1,2 @@
-import React from 'react';
-import {Seo, PageLayout} from '../components';
-
-const index = () => {
-    return (
-        <PageLayout>
-            <Seo />
-            Hello gatsby
-        </PageLayout>
-    )
-}
-
-export default index;
+import Home from "./home/Home";
+export default Home;

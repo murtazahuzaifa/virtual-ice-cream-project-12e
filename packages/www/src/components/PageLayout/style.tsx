@@ -1,17 +1,30 @@
 import styled from 'styled-components';
 
-export const Header = styled.div`
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    /* background: black; */
-    /* color: black; */
-    width: 100%;
-    padding: 10px 0;
-`
-
 export const Wrapper = styled.div`
     width: 100%;
+`
+
+export const Header = styled.div`
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    font-style: italic;
+    text-align: center;
+    >h1{
+        font-family: Yellowtail,cursive;
+        font-size: 50px;
+        margin: 10px;
+        color:whitesmoke;
+        text-shadow: 0px 0px 10px #046369;
+    }
+    >p{
+        font-size: 30px;
+        color:whitesmoke;
+        text-shadow: 0px 0px 5px #046369;
+    }
 `
 
 export const ChildWrapper = styled.div`

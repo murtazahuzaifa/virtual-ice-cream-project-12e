@@ -9,7 +9,8 @@ const PageLayout: FC<Props> = ({ children }) => {
     return (
         <s.Wrapper>
             <s.Header>
-                <h1>Virtual Ice Cream</h1>
+                <h1>Virtual IceCream</h1>
+                <p>because we all know someone who deserves some sugar</p>
             </s.Header>
             <s.ChildWrapper>
                 {children}

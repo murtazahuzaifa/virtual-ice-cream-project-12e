@@ -10,10 +10,7 @@ button {
     user-select: none;
 }
 
-body{
-    min-height: 100vh;
-    background: radial-gradient(rgb(227, 239, 252), rgb(239, 245, 232)) no-repeat center;
-    background-size: cover;
-    /* background-position: center; */
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+html {
+    background: radial-gradient(rgb(189, 205, 221), rgb(107, 117, 93)) no-repeat center;
+    font-family: cursive;
 }
