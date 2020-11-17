@@ -1,0 +1,11 @@
+{
+  "name": "____",
+  "description": "___",
+  "version": "1.0.0",
+  "author": "Murtaza Hanzala",
+  "private":true,
+  "license": "MIT",
+  "workspaces":[
+    "packages/*"
+  ]
+}
