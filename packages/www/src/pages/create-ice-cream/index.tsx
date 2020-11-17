@@ -1,10 +1,11 @@
+import { PageProps } from 'gatsby';
 import React, { FC, useState } from 'react';
 import { Seo, PageLayout, IceCream, ColorPalette,CreateIceCreamForm } from '../../components';
 import {ColorState} from '../../components/ColorPalette';
 import * as s from './style';
 
 // value={col.color1} onChange={e => { setCol({ ...col, color1: e.target.value }) }}
-const CreateIceCream: FC<{}> = ({ }) => {
+const CreateIceCream: FC<PageProps<{},{},{}>> = ({ }) => {
 
     const [col, setCol] = useState<ColorState>({ color1: '#f0ecdb', color2: '#9f5e32', color3: '#5f3c25' })
 

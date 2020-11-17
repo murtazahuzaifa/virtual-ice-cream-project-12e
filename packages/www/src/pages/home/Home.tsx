@@ -1,9 +1,10 @@
 import React, { FC } from 'react';
 import { Seo, PageLayout, IceCream, Button } from '../../components';
-import { navigate } from 'gatsby';
+import { navigate, PageProps } from 'gatsby';
 import * as s from './style';
 
-const Home: FC<{}> = ({ }) => {
+const Home: FC<PageProps> = ({ }) => {
+
     return (
         <PageLayout>
             <Seo />

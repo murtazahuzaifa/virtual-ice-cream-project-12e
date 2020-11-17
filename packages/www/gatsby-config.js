@@ -14,12 +14,11 @@ module.exports = {
             resolve: 'gatsby-source-graphql',
             options: {
                 // This type will contain remote schema Query type
-                typeName: 'ICECREAM',
+                typeName: 'VIRTUALICECREAM',
                 // This is field under which it's accessible
-                fieldName: 'iceCream',
+                fieldName: 'virtualIceCream',
                 // Url to query from
-                url:
-                    'http://localhost:8888/.netlify/functions/graphql',
+                url:'http://localhost:8888/.netlify/functions/graphql',
             },
         },
     ]
