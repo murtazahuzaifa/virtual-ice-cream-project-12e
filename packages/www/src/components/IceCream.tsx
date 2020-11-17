@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, CSSProperties } from 'react';
 
 const st5 = '#E62B42';
 const st6 = '#C69C6D';
@@ -12,12 +12,12 @@ const st13 = '#FFFEFE';
 const st14 = '#EE7594';
 
 export interface Props {
-	crmlayer1?: string,
-	crmlayer2?: string,
-	crmlayer3?: string,
-	crmlayer4?: string,
-	cherry?: string,
-	biscuit?: string,
+	crmlayer1?: CSSProperties['color'],
+	crmlayer2?: CSSProperties['color'],
+	crmlayer3?: CSSProperties['color'],
+	crmlayer4?: CSSProperties['color'],
+	cherry?: CSSProperties['color'],
+	biscuit?: CSSProperties['color'],
 }
 
 const IceCream: FC<Props> = ({

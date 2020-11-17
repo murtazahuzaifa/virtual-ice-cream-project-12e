@@ -1,8 +1,8 @@
-import React, { FC, ChangeEventHandler, useState } from 'react';
+import React, { FC, ChangeEventHandler, useState, CSSProperties } from 'react';
 import * as s from './style';
 
 export type ColorState = {
-    color1: string; color2: string; color3: string;
+    color1: CSSProperties['color']; color2: CSSProperties['color']; color3: CSSProperties['color'];
 }
 
 interface Props {

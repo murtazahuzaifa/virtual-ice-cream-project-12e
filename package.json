@@ -1,6 +1,6 @@
 {
   "name": "virtual-ice-cream-project-12e",
-  "description": "project of virtaul ice-cream",
+  "description": "project of virtaul ice-cream created using gatsby, serverless graphql and faunadb",
   "version": "1.0.0",
   "author": "Murtaza Hanzala",
   "private": true,

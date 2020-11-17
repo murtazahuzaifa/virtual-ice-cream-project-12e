@@ -19,6 +19,7 @@ export const Header = styled.div`
         margin: 10px;
         color:whitesmoke;
         text-shadow: 0px 0px 10px #046369;
+        cursor: pointer;
     }
     >p{
         font-size: 30px;
