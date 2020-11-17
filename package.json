@@ -1,11 +1,14 @@
 {
-  "name": "____",
-  "description": "___",
+  "name": "virtual-ice-cream-project-12e",
+  "description": "project of virtaul ice-cream",
   "version": "1.0.0",
   "author": "Murtaza Hanzala",
-  "private":true,
+  "private": true,
   "license": "MIT",
-  "workspaces":[
+  "scripts": {
+    "install-client-function": "yarn install --packages/www && cd functions && yarn install"
+  },
+  "workspaces": [
     "packages/*"
   ]
 }
