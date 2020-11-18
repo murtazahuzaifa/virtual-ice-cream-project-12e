@@ -13,13 +13,16 @@ export const Header = styled.div`
     padding: 20px;
     font-style: italic;
     text-align: center;
-    >h1{
+    >a{
+        text-decoration: none;
+        >h1{
         font-family: Yellowtail,cursive;
         font-size: 50px;
         margin: 10px;
         color:whitesmoke;
         text-shadow: 0px 0px 10px #046369;
         cursor: pointer;
+    }
     }
     >p{
         font-size: 30px;

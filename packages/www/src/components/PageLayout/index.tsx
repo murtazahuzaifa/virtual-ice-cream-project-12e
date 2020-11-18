@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react'
-import {navigate} from 'gatsby';
 import * as s from './style';
 
 export interface Props {
@@ -10,7 +9,7 @@ const PageLayout: FC<Props> = ({ children }) => {
     return (
         <s.Wrapper>
             <s.Header>
-                <h1 onClick={()=>{navigate('/')}} >Virtual IceCream</h1>
+                <a href="/"><h1 >Virtual IceCream</h1></a>
                 <p>because we all know someone who deserves some sugar</p>
             </s.Header>
             <s.ChildWrapper>

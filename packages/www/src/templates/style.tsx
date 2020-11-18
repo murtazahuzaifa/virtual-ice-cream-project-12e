@@ -27,7 +27,7 @@ export const Url = styled.div`
     margin: 10px 0;
 `
 export const Details = styled.div`
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(226, 164, 139, 0.171);
     font-family: Yellowtail,cursive;
     min-height: 250px;
     padding:10px;

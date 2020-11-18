@@ -40,8 +40,9 @@ const IceCreamPage: FC<PageProps<QuerySchema, PageContext, {}>> = ({ pageContext
                     <IceCream crmlayer1={color1} crmlayer4={color1} crmlayer2={color2} crmlayer3={color3} />
                 </div>
                 <s.Card>
-                    <p>Share Ice-Cream with this link:</p>
-                    <s.Url>{`${baseUrl}/ice-cream/${id}`}</s.Url>
+                    <p>This Ice-Cream is for you.</p>
+                    {/* <p>Share Ice-Cream with this link:</p> */}
+                    {/* <s.Url>{`${baseUrl}/ice-cream/${id}`}</s.Url> */}
                     <s.Details>
                         <div>Dear {receiverName},</div>
                         <s.Message>{message}</s.Message>

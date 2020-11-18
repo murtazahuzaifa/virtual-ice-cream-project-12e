@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Formik, Form, ErrorMessage, Field, FormikHelpers } from 'formik';
 import { ColorState } from '../ColorPalette';
+import { IceCreamType } from '../../typedefs';
 import * as s from './style';
 
 // export type IceCreamColors = { col1: string, col2: string, col3: string }
@@ -8,13 +9,6 @@ export interface FormFields {
     to: string; message: string; from: string,
 }
 
-const onSubmit = (iceCreamColor: ColorState) => async (values: FormFields, { setSubmitting, resetForm }: FormikHelpers<FormFields>) => {
-    setTimeout(() => {
-        console.log("values", values, '\n', "Colors", iceCreamColor);
-        resetForm();
-        setSubmitting(false);
-    }, 2000)
-}
 const onValidation = (values: FormFields) => {
     const error: { [P in keyof FormFields]?: string } = {}
     if (values.from === '') { error.from = 'Your name required' }
@@ -27,12 +21,24 @@ const formInitialValues: FormFields = {
     from: '', message: '', to: '',
 }
 
-export interface Props { iceCreamColor: ColorState }
-const CreateIceCreamForm: FC<Props> = ({ iceCreamColor }) => {
+export interface Props {
+    iceCreamColor: ColorState,
+    onSubmitStart?: () => void,
+    onSubmitEnd?: (res: IceCreamType) => void,
+}
+const CreateIceCreamForm: FC<Props> = ({ iceCreamColor, onSubmitStart, onSubmitEnd }) => {
+
+    const onSubmit = async ({ to, from, message }: FormFields, { setSubmitting, resetForm }: FormikHelpers<FormFields>) => {
+        // console.log("values", values, '\n', "Colors", iceCreamColor);
+        onSubmitStart && onSubmitStart();
+        resetForm();
+        setSubmitting(false);
+        onSubmitEnd && onSubmitEnd({ id: '', ts: '', message, receiverName: to, senderName: from, iceCreamColor })
+    }
 
     return (
         <s.Container>
-            <Formik initialValues={formInitialValues} onSubmit={onSubmit(iceCreamColor)} validate={onValidation} >
+            <Formik initialValues={formInitialValues} onSubmit={onSubmit} validate={onValidation} >
                 {(formik) => (
                     <Form>
                         <s.InputLable htmlFor="_to">

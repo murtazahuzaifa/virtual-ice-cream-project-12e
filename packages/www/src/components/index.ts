@@ -4,6 +4,7 @@ import IceCream from './IceCream';
 import ColorPalette from './ColorPalette';
 import CreateIceCreamForm from './CreateIceCreamForm';
 import Button from './Button';
+import Loader from './Loader';
 
 export {
     Seo,
@@ -12,4 +13,5 @@ export {
     ColorPalette,
     CreateIceCreamForm,
     Button,
+    Loader,
 }
