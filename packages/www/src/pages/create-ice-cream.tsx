@@ -22,7 +22,7 @@ const CreateIceCream: FC<PageProps<{}, {}, {}>> = ({ }) => {
     const [isFormSubmit, setFromSubmit] = useState<boolean>(false);
     const [isLoading, setLoading] = useState<boolean>(false);
     const [response, setResponse] = useState<IceCreamType>(initialResponse);
-    const handleResponse = (res: IceCreamType) => { setResponse({ ...res }); setFromSubmit(true); setLoading(false) };
+    const handleResponse = (res: IceCreamType) => { setResponse({ ...res }); setLoading(false); setFromSubmit(true) };
     const onSubmitStart = () => { setLoading(true) };
 
     return (

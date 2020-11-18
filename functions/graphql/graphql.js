@@ -1,6 +1,7 @@
 require('dotenv').config();
 const { gql, ApolloServer } = require('apollo-server-lambda');
 const faunadb = require('faunadb');
+const axios = require('axios').default;
 
 const q = faunadb.query;
 const client = new faunadb.Client({ secret: process.env.VIRTUAL_ICE_CREAM_DB_KEY });
@@ -49,6 +50,16 @@ const resolvers = {
       const result = await client.query(
         q.Create(q.Collection('ice-creams'), { data: { receiverName, senderName, message, iceCreamColor: { color1, color2, color3 } } },)
       );
+      // calling github dispatch event to trigger workflow, to add new ice-cream page
+      await axios.post("https://api.github.com/repos/murtazahuzaifa/virtual-ice-cream-project-12e/dispatches",
+        { "event_type": "virtual.ice-cream.added" },
+        {headers: {
+          Accept: "application/vnd.github.everest-preview+json",
+          Authorization: `Bearer ${process.env.GITHUB_DISPATCH_WORKFLOW_TOKEN}`,
+          "Content-Type": "application/json",
+        } }
+      );
+
       return {
         id: result.ref.id,
         ts: result.ts,
