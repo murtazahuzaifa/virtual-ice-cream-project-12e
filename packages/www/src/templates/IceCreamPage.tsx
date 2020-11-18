@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC,useEffect } from 'react';
 import { PageProps } from 'gatsby';
 import { Seo, PageLayout, IceCream } from '../components';
 import { ColorState } from '../components/ColorPalette';
@@ -28,7 +28,6 @@ interface PageContext {
 
 const IceCreamPage: FC<PageProps<QuerySchema, PageContext, {}>> = ({ pageContext, path }) => {
     // console.log(window.location.origin);
-    let baseUrl = window.location.origin||'';
     const { message, receiverName, iceCreamColor, senderName, id } = pageContext;
     const { color1, color2, color3 } = iceCreamColor;
 

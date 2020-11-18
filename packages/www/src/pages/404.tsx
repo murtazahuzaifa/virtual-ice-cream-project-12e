@@ -1,7 +1,7 @@
 import { PageProps } from 'gatsby';
 import React, { FC } from 'react';
-import * as s from './style';
-import {PageLayout, Seo} from '../../components';
+import * as s from '../pages-styles/_404.style';
+import {PageLayout, Seo} from '../components';
 
 const PageNotFound:FC<PageProps> = () => {
     return (

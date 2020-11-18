@@ -1,6 +1,5 @@
-
 {
-  "name": "backend",
+  "name": "jamstact-todo-backend",
   "version": "1.0.0",
   "description": "serverless backend",
   "author": "Murtaza Hanzala",

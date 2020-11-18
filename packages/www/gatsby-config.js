@@ -18,7 +18,7 @@ module.exports = {
                 // This is field under which it's accessible
                 fieldName: 'virtualIceCream',
                 // Url to query from
-                url:'http://localhost:8888/.netlify/functions/graphql',
+                url:'https://virtual-ice-cream-by-murtaza.netlify.app/.netlify/functions/graphql',
             },
         },
     ]

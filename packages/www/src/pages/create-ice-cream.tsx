@@ -1,9 +1,9 @@
 import { PageProps } from 'gatsby';
-import React, { FC, useState } from 'react';
-import { Seo, PageLayout, IceCream, ColorPalette, CreateIceCreamForm, Loader } from '../../components';
-import { ColorState } from '../../components/ColorPalette';
-import * as s from './style';
-import { IceCreamType } from '../../typedefs';
+import React, { FC, useState, useEffect } from 'react';
+import { Seo, PageLayout, IceCream, ColorPalette, CreateIceCreamForm, Loader } from '../components';
+import { ColorState } from '../components/ColorPalette';
+import * as s from '../pages-styles/create-ice-cream.style';
+import { IceCreamType } from '../typedefs';
 
 const initialResponse: IceCreamType = {
     id: '',
@@ -13,10 +13,11 @@ const initialResponse: IceCreamType = {
     senderName: "",
     ts: ''
 }
+let baseUrl = '';
 // value={col.color1} onChange={e => { setCol({ ...col, color1: e.target.value }) }}
 const CreateIceCream: FC<PageProps<{}, {}, {}>> = ({ }) => {
 
-    let baseUrl = window.location.origin || '';
+    useEffect(() => { baseUrl = window.location.origin })
     const [col, setCol] = useState<ColorState>({ color1: '#f0ecdb', color2: '#9f5e32', color3: '#5f3c25' });
     const [isFormSubmit, setFromSubmit] = useState<boolean>(false);
     const [isLoading, setLoading] = useState<boolean>(false);
