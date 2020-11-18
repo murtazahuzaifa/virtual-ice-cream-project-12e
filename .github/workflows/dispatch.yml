@@ -27,9 +27,7 @@ jobs:
         with:
           node-version: 12
 
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install-client-function # will run `yarn install` command
+      - run: npm run install-client-function
       
       - name: Build Gatsby Site
         uses: jzweifel/gatsby-cli-github-action@master
