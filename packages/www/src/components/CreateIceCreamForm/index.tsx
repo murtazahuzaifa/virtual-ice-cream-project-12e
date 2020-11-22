@@ -86,7 +86,7 @@ const CreateIceCreamForm: FC<Props> = ({ iceCreamColor, onSubmitStart, onSubmitE
                             <ErrorMessage name='price' render={(msg) => <span style={{ color: 'red' }}>{msg}</span>} />
                         </s.InputLable>
                         <div style={{ display: "flex" }}>
-                            <s.SubmitBtn type='submit' disabled={!formik.dirty || !formik.isValid}>SUBMIT</s.SubmitBtn>
+                            <s.SubmitBtn type='submit' disabled={!formik.dirty || !formik.isValid}>Freeze</s.SubmitBtn>
                         </div>
                     </Form>
                 )}

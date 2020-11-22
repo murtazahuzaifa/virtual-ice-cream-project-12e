@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC } from 'react';
 import { Seo, PageLayout, IceCream, Button } from '../components';
 import { navigate, PageProps } from 'gatsby';
 import * as s from '../pages-styles/index.style';
@@ -15,7 +15,7 @@ const Home: FC<PageProps> = ({ }) => {
             </s.IcreamWrap>
             <div style={{ display: 'flex', margin: '30px' }} >
                 <Button onClick={() => { navigate('/create-ice-cream') }} >
-                    Make a new Ice-Cream to send to a friend
+                    Freeze a new Ice-Cream to send to a friend
                 </Button>
             </div>
         </PageLayout>
