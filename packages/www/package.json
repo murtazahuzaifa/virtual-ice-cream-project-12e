@@ -37,6 +37,6 @@
     "@types/react-helmet": "^6.1.0",
     "@types/styled-components": "^5.1.4",
     "babel-loader": "^8.2.1",
-    "react-is": "^17.0.1"
+    "react-is": "^16.13.1"
   }
 }

@@ -15,7 +15,6 @@ exports.createPages = async ({ graphql, actions }) => {
         }}}}
     `
     );
-    // console.log(JSON.stringify(result));
     virtualIceCream.allIceCreams.forEach(({ id, ts, receiverName, senderName, message, iceCreamColor }) => {
         createPage({
             path: `/ice-cream/${id}`,
